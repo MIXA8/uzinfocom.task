@@ -38,9 +38,9 @@ class FileController extends Controller
         $file = File::findOrFail($id);
 
         if ($this->fileService->deleteFile($file)) {
-            return response()->json(['message' => 'File deleted successfully']);
+            return response()->json(['message' => 'Файл удален успешно']);
         }
 
-        return response()->json(['error' => 'You do not have permission to delete this file'], 403);
+        return response()->json(['error' => 'Нет права удалить этот файл'], 403);
     }
 }

@@ -1,0 +1,251 @@
+{
+	"info": {
+		"_postman_id": "ad1cf790-f5e1-4ef1-bcac-045dcb19e2d5",
+		"name": "Uzinfocom",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19987750"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3JlZ2lzdGVyIiwiaWF0IjoxNzQzMTc0NDM1LCJleHAiOjE3NDMxNzgwMzUsIm5iZiI6MTc0MzE3NDQzNSwianRpIjoiNFc0aTZ6Wmw0dkhSQ0l5OSIsInN1YiI6IjMiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.nuS4bZmBZUirwoZEJD9U1aFacw5s8N87xq405YZTses",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "MADJON",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "javonsher@list.ru",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "+998907155725",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}api/register",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzQzMTc1MDQyLCJleHAiOjE3NDMxNzg2NDIsIm5iZiI6MTc0MzE3NTA0MiwianRpIjoiRmVXaGpTNmZQclBtbjA4WCIsInN1YiI6IjMiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.-Djuo9_qDblLq6E9TxgNQhK44KvjZedkUIbKzVdERRM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{url}}api/user",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzQzMTkxMzk1LCJleHAiOjE3NDMxOTQ5OTUsIm5iZiI6MTc0MzE5MTM5NSwianRpIjoiUm16RWRZSkhLaVdUTTNhWiIsInN1YiI6IjEyIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.h3llfPSbZtDDm4Z7_WmVc5lWPgKPJLoCN0-Dpgofsbs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "rosocufagy@mailinator.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456789",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}api/login",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Files",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzQzMTkxNzA3LCJleHAiOjE3NDMxOTUzMDcsIm5iZiI6MTc0MzE5MTcwNywianRpIjoiNjQ5akdJc3pXSllSUUN2MSIsInN1YiI6IjExIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.e0rmRgtsiyaP4BezU95gG01oWXKo30mXcVsQsGTWDqQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/PREDATOR/Downloads/1617195739_MySQL-logo-PNG-Transparent-Background.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}api/files",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"files"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzQzMTkxMzk1LCJleHAiOjE3NDMxOTQ5OTUsIm5iZiI6MTc0MzE5MTM5NSwianRpIjoiUm16RWRZSkhLaVdUTTNhWiIsInN1YiI6IjEyIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.h3llfPSbZtDDm4Z7_WmVc5lWPgKPJLoCN0-Dpgofsbs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}api/files",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"files"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzQzMTkxNzA3LCJleHAiOjE3NDMxOTUzMDcsIm5iZiI6MTc0MzE5MTcwNywianRpIjoiNjQ5akdJc3pXSllSUUN2MSIsInN1YiI6IjExIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.e0rmRgtsiyaP4BezU95gG01oWXKo30mXcVsQsGTWDqQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{url}}api/files/13",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"files",
+								"13"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

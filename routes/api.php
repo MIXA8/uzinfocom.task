@@ -24,8 +24,7 @@ Route::post('register', [AuthController::class, 'register']);
 Route::post('login', [AuthController::class, 'login']);
 Route::post('logout', [AuthController::class, 'logout'])->middleware('auth:api');
 
-
-Route::middleware('auth:api')->group(function () {
+Route::middleware(['auth:api', 'active'])->group(function () {
     Route::post('/files', [FileController::class, 'upload']);  // Загрузка файла
     Route::get('/files', [FileController::class, 'index']);  // Список файлов
     Route::delete('/files/{id}', [FileController::class, 'delete']);  // Удаление файла

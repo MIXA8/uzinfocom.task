@@ -3,6 +3,7 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
+use App\Enums\Role;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -50,6 +51,13 @@ class User extends \TCG\Voyager\Models\User implements JWTSubject
     {
         return $this->getKey();
     }
+
+
+    public function getRoleAttribute(): Role
+    {
+        return Role::from($this->role_id);
+    }
+
 
     public function getJWTCustomClaims()
     {
