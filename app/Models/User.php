@@ -7,8 +7,9 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use Tymon\JWTAuth\Contracts\JWTSubject;
 
-class User extends \TCG\Voyager\Models\User
+class User extends \TCG\Voyager\Models\User implements JWTSubject
 {
     use HasApiTokens, HasFactory, Notifiable;
 
@@ -20,7 +21,8 @@ class User extends \TCG\Voyager\Models\User
     protected $fillable = [
         'name',
         'email',
-        'role',
+        'role_id',
+        'is_active',
         'password',
     ];
 
@@ -41,5 +43,22 @@ class User extends \TCG\Voyager\Models\User
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
+        'is_active' => 'boolean',
     ];
+
+    public function getJWTIdentifier()
+    {
+        return $this->getKey();
+    }
+
+    public function getJWTCustomClaims()
+    {
+        // TODO: Implement getJWTCustomClaims() method.
+        return [];
+    }
+
+    public function files()
+    {
+        return $this->belongsToMany(File::class, 'file_user', 'user_id', 'file_id');
+    }
 }

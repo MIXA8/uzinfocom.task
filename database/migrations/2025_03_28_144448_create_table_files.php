@@ -14,9 +14,9 @@ return new class extends Migration
         Schema::create('files', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
-            $table->string('file_name');
-            $table->string('file_hash')->unique();
-            $table->string('file_path');
+            $table->string('name');
+            $table->string('hash')->unique();
+            $table->string('path');
             $table->timestamps();
         });
     }
